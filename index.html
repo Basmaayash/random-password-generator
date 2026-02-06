@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- تنبيه النسخ -->
+    <div id="toast" class="toast">Password copied successfully! ✅</div>
+
+    <h1>Generate a<br><span>Random Password</span></h1>
+
+    <!-- صندوق عرض كلمة المرور -->
+    <div class="display">
+        <input type="text" id="Password" placeholder="Password" readonly>
+        <img src="images/copy.png" alt="Copy" onclick="copyPassword()">
+    </div>
+
+    <!-- مؤشر القوة -->
+    <div class="strength-box">
+        <span id="strength-text">Strength: —</span>
+        <div class="strength-bar">
+            <div id="strength-level"></div>
+        </div>
+    </div>
+
+    <!-- اختيار طول كلمة المرور -->
+    <div class="length-box">
+        <label for="length">Password Length:</label>
+        <input type="text" id="length" value="12" inputmode="numeric" >
+    </div>
+
+    <!-- اختيار أنواع الأحرف -->
+    <div class="options-box">
+        <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+        <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+        <label><input type="checkbox" id="numbers" checked> Numbers</label>
+        <label><input type="checkbox" id="symbols" checked> Symbols</label>
+    </div>
+
+    <button onclick="createPassword()">
+        <img src="images/generate.png" alt="Generate">
+        Generate Password
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
